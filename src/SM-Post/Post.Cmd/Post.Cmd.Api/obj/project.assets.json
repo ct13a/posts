@@ -33,6 +33,44 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "CQRS.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/CQRS.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CQRS.Core.dll": {}
+        }
+      },
+      "Post.Cmd.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj": "1.0.0",
+          "CQRS.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Post.Cmd.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Post.Cmd.Domain.dll": {}
+        }
+      },
+      "Post.Cmd.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CQRS.Core": "1.0.0",
+          "Post.Cmd.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Post.Cmd.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Post.Cmd.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -67,11 +105,30 @@
         "microsoft.openapi.1.6.17.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "CQRS.Core/1.0.0": {
+      "type": "project",
+      "path": "../../../CQRS-ES/CQRS.Core/CQRS.Core.csproj",
+      "msbuildProject": "../../../CQRS-ES/CQRS.Core/CQRS.Core.csproj"
+    },
+    "Post.Cmd.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Post.Cmd.Domain/Post.Cmd.Domain.csproj",
+      "msbuildProject": "../Post.Cmd.Domain/Post.Cmd.Domain.csproj"
+    },
+    "Post.Cmd.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Post.Cmd.Infrastructure/Post.Cmd.Infrastructure.csproj",
+      "msbuildProject": "../Post.Cmd.Infrastructure/Post.Cmd.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Microsoft.AspNetCore.OpenApi >= 9.0.5"
+      "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj",
+      "CQRS.Core >= 1.0.0",
+      "Microsoft.AspNetCore.OpenApi >= 9.0.5",
+      "Post.Cmd.Domain >= 1.0.0",
+      "Post.Cmd.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -107,7 +164,20 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\WORKSPACE0\\posts\\src\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj": {
+              "projectPath": "C:\\WORKSPACE0\\posts\\src\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj"
+            },
+            "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Domain\\Post.Cmd.Domain.csproj": {
+              "projectPath": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Domain\\Post.Cmd.Domain.csproj"
+            },
+            "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Infrastructure\\Post.Cmd.Infrastructure.csproj": {
+              "projectPath": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Infrastructure\\Post.Cmd.Infrastructure.csproj"
+            },
+            "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj": {
+              "projectPath": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -153,5 +223,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

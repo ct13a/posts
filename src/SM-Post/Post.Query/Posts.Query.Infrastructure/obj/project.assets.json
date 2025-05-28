@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "CQRS.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/CQRS.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CQRS.Core.dll": {}
+        }
+      },
+      "Posts.Query.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj": "1.0.0",
+          "CQRS.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Posts.Query.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Posts.Query.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CQRS.Core/1.0.0": {
+      "type": "project",
+      "path": "../../../CQRS-ES/CQRS.Core/CQRS.Core.csproj",
+      "msbuildProject": "../../../CQRS-ES/CQRS.Core/CQRS.Core.csproj"
+    },
+    "Posts.Query.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Posts.Query.Domain/Posts.Query.Domain.csproj",
+      "msbuildProject": "../Posts.Query.Domain/Posts.Query.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Posts.Query.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ctq1cob\\.nuget\\packages\\": {},
@@ -40,7 +78,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Query\\Posts.Query.Domain\\Posts.Query.Domain.csproj": {
+              "projectPath": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Query\\Posts.Query.Domain\\Posts.Query.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -77,5 +119,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

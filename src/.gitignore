@@ -1,0 +1,75 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userprefs
+PrivateSettings.xml
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+**/bin/
+**/obj/             # This line will ignore all 'obj' folders anywhere in the repository
+[Oo]ut/
+build/
+Build/
+*.log
+*.pfx
+*.vsix
+*.nupkg
+*.appx
+*.pri
+*.scc
+_UpgradeReport_Files/
+
+# Rider files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# NuGet packages
+packages/
+*.nuget/
+project.lock.json
+
+# Resharper files
+*.resharper
+*.resharper.user
+
+# SonarQube
+.sonarqube/
+
+# DotCover
+.dcvr/
+
+# NServiceBus
+ServiceBus/
+
+# Test results
+TestResults/
+*.trx
+
+# Visual Studio Code
+.vscode/
+
+# Editor config
+.editorconfig
+
+# Local machine settings
+appsettings.Development.json
+appsettings.Local.json
+
+# Generated files
+*.bak
+*.orig
+*.swp
+*.swo
+
+# Docker
+*.dockerignore
+
+# Misc
+*.pid
+*.psmdcp
+*.vshost.*
