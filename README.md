@@ -78,7 +78,17 @@
   - Create Infra: src\SM-Post\Post.Query> dotnet new classlib -o Posts.Query.Infrastructure
 
 * Add all the projects to the solution file
-  - 
+  * Core
+    - src\SM-Post> dotnet sln add ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj
+  * Command
+    - src\SM-Post> dotnet sln add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj
+    - src\SM-Post> dotnet sln add .\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj
+    - src\SM-Post> dotnet sln add .\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj
+  * Query
+    - src\SM-Post> dotnet sln add .\Post.Query\Posts.Query.Api\Posts.Query.Api.csproj
+    - src\SM-Post> dotnet sln add .\Post.Query\Posts.Query.Domain\Posts.Query.Domain.csproj
+    - src\SM-Post> dotnet sln add .\Post.Query\Posts.Query.Infrastructure\Posts.Query.Infrastructure.csproj
+
 
 
 
