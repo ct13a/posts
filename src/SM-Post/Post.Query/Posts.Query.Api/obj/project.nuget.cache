@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "myh+ru3k6mc=",
+  "success": true,
+  "projectFilePath": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Query\\Posts.Query.Api\\Posts.Query.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ctq1cob\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
+    "C:\\Users\\ctq1cob\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
