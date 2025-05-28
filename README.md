@@ -88,7 +88,12 @@
     - src\SM-Post> dotnet sln add .\Post.Query\Posts.Query.Api\Posts.Query.Api.csproj
     - src\SM-Post> dotnet sln add .\Post.Query\Posts.Query.Domain\Posts.Query.Domain.csproj
     - src\SM-Post> dotnet sln add .\Post.Query\Posts.Query.Infrastructure\Posts.Query.Infrastructure.csproj
-
+* Add project reference
+  * Post.Cmd.Api <= CQRS.Core, Post.Cmd.Domain, Post.Cmd.Infra
+    - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj
+    - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference .\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj
+    - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference .\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj
+    - 
 
 
 
