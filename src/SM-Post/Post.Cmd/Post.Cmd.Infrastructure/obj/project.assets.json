@@ -16,14 +16,27 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj": "1.0.0",
-          "CQRS.Core": "1.0.0"
+          "CQRS.Core": "1.0.0",
+          "Post.Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Post.Cmd.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/Post.Cmd.Domain.dll": {}
+        }
+      },
+      "Post.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CQRS.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Post.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Post.Common.dll": {}
         }
       }
     }
@@ -38,6 +51,11 @@
       "type": "project",
       "path": "../Post.Cmd.Domain/Post.Cmd.Domain.csproj",
       "msbuildProject": "../Post.Cmd.Domain/Post.Cmd.Domain.csproj"
+    },
+    "Post.Common/1.0.0": {
+      "type": "project",
+      "path": "../../Post.Common/Post.Common.csproj",
+      "msbuildProject": "../../Post.Common/Post.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -123,16 +141,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }

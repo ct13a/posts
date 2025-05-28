@@ -1,18 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tewnM1PoFVk=",
-  "success": false,
+  "dgSpecHash": "7eD1N7jP3Eg=",
+  "success": true,
   "projectFilePath": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Infrastructure\\Post.Cmd.Infrastructure.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

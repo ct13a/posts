@@ -1,21 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8Tsk1ROTWlw=",
-  "success": false,
+  "dgSpecHash": "2cmDKxKhI5g=",
+  "success": true,
   "projectFilePath": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Api\\Post.Cmd.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ctq1cob\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
     "C:\\Users\\ctq1cob\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "C:\\WORKSPACE0\\posts\\src\\SM-Post\\Post.Common\\Post.Common.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }
