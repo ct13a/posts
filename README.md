@@ -112,3 +112,18 @@
   * Post.Common <= 1 ref (CQRS.Core)
     * src\SM-Post> dotnet add .\Post.Common\Post.Common.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj
 
+* Add project reference 5
+  * Post.Query.Api <= 4 refs (CQRS.Core, Domain, Infra, Common)
+    * src\SM-Post> dotnet add .\Post.Query\Posts.Query.Api\Posts.Query.Api.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj 
+    * src\SM-Post> dotnet add .\Post.Query\Posts.Query.Api\Posts.Query.Api.csproj reference .\Post.Query\Posts.Query.Domain\Posts.Query.Domain.csproj
+    * src\SM-Post> dotnet add .\Post.Query\Posts.Query.Api\Posts.Query.Api.csproj reference .\Post.Query\Posts.Query.Infrastructure\Posts.Query.Infrastructure.csproj
+    * src\SM-Post> dotnet add .\Post.Query\Posts.Query.Api\Posts.Query.Api.csproj reference .\Post.Common\Post.Common.csproj
+
+* Add project reference 6
+  * Post.Query.Domain <= 2 refs (CQRS.Core, Domain)
+    * src\SM-Post> dotnet add .\Post.Query\Posts.Query.Domain\Posts.Query.Domain.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj
+    * src\SM-Post> dotnet add .\Post.Query\Posts.Query.Domain\Posts.Query.Domain.csproj reference .\Post.Common\Post.Common.csproj 
+  
+* Add project reference 7
+  * Post.Query.Infra <= 1 refs (Domain)
+    * src\SM-Post> dotnet add .\Post.Query\Posts.Query.Infrastructure\Posts.Query.Infrastructure.csproj reference .\Post.Query\Posts.Query.Domain\Posts.Query.Domain.csproj
