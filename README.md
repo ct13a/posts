@@ -93,7 +93,9 @@
     - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj
     - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference .\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj
     - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference .\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj
-    - 
+* Add Common project
+* Add reference
+* - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference .\Post.Common\Post.Common.csproj reference ..\..\Post.Common\Post.Common.csproj added to the project.
 
 
 
