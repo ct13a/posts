@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   zookeeper:
-    image: bitnami/zookeeper
+    image: bitnami/zookeeper:latest # You can keep latest for Zookeeper or pin it too.
     restart: always
     ports:
       - "2181:2181"
@@ -11,21 +11,21 @@ services:
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
   kafka:
-    image: bitnami/kafka
+    image: bitnami/kafka:3.5.0 # <--- CHANGE THIS LINE to a specific version
     ports:
       - "9092:9092"
     restart: always
     volumes:
       - "kafka_data:/bitnami"
     environment:
-      # Explicitly set ZooKeeper connection for ZooKeeper-based Kafka
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
       - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
-      # Add a unique ID for the broker (required even for ZooKeeper mode in newer Kafka versions)
       - KAFKA_CFG_BROKER_ID=1
-      - KAFKA_ENABLE_KRAFT=no # <--- ADD THIS LINE
+      # We will still keep KAFKA_ENABLE_KRAFT=no, though it might not be strictly necessary with an older image,
+      # it provides explicit intent.
+      - KAFKA_ENABLE_KRAFT=no
     depends_on:
       - zookeeper
 
