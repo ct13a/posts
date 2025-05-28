@@ -88,14 +88,27 @@
     - src\SM-Post> dotnet sln add .\Post.Query\Posts.Query.Api\Posts.Query.Api.csproj
     - src\SM-Post> dotnet sln add .\Post.Query\Posts.Query.Domain\Posts.Query.Domain.csproj
     - src\SM-Post> dotnet sln add .\Post.Query\Posts.Query.Infrastructure\Posts.Query.Infrastructure.csproj
-* Add project reference
-  * Post.Cmd.Api <= CQRS.Core, Post.Cmd.Domain, Post.Cmd.Infra
+  
+* Add project reference 1
+  * Post.Cmd.Api <= 4 refs (CQRS.Core, Post.Cmd.Domain, Post.Cmd.Infra, common)
     - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj
     - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference .\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj
     - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference .\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj
 * Add Common project
 * Add reference
-* - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference .\Post.Common\Post.Common.csproj reference ..\..\Post.Common\Post.Common.csproj added to the project.
+* - src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj reference .\Post.Common\Post.Common.csproj reference .\Post.Common\Post.Common.csproj added to the project.
 
+* Add project reference 2
+  * Post.Cmd.Domain <= 2 refs (CQRS.Core, Common)
+    * src\SM-Post> dotnet add .\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj reference .\CQRS-ES\CQRS.Core\CQRS.Core.csproj added to the project.
+    * dotnet add .\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj reference .\Post.Common\Post.Common.csproj
+  
+* Add project reference 3
+  * Post.Cmd.Infra <= 2 refs (CQRS.Core, Domain)
+    * dotnet add .\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj added to the project.
+    * dotnet add .\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj reference .\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj reference .\Post.Cmd.Domain\Post.Cmd.Domain.csproj added to the project.
 
+* Add project reference 4
+  * Post.Common <= 1 ref (CQRS.Core)
+    * src\SM-Post> dotnet add .\Post.Common\Post.Common.csproj reference ..\CQRS-ES\CQRS.Core\CQRS.Core.csproj
 
